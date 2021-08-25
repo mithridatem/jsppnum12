@@ -26,7 +26,7 @@ function recup()
         //affichage de la réponse dans la page
         resultat.innerHTML = "Minime";
     }
-    //sinon
+    //sinon 
     else if(age>=12)
     {
         //affichage de la réponse dans la console
