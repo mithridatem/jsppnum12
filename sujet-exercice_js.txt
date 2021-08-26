@@ -1,0 +1,48 @@
+Exercice html, js (tableaux, fonction, sélecteur getElementById, innerHTML)
+
+1 Créer une page web qui va contenir les élèments suivants dans le body:
+
+titre h2 : ajouter un utilisateur,
+Formulaire début ->
+Paragraphe : saisir un nom :,
+Champ input text avec comme attribut id = "name",
+Paragraphe : saisir un prénom :,
+Champ input text avec comme attribut id = "firstName",
+Paragraphe : saisir un login :,
+Champ input text avec comme attribut id = "login",
+Paragraphe : saisir un mot de passe :,
+Champ input text avec comme attribut id = "mdp",
+Champ input button avec comme attribut value="Ajouter" et onclick="ajouter(),
+<-Formulaire fin
+Titre h3 avec comme attribut id = "error",
+Titre h2 avec pour valeur : Liste des comptes utilisateurs créés :,
+titre h3 avec comme attribut id ="nbrCompte" et comme valeur : Il n'y à aucun compte utilisateur,
+Paragraphe avec comme attribut id = "resultat",
+
+2 Créer un fichier js, le lier au fichier html avec defer qui va contenir les élèments suivants :
+
+Création des variables suivantes :
+tab (tableau vide),
+cpt (vide qui va servir de compteur),
+
+Stockage dans des variables avec getElementById de :
+resultat, nbrCompte, error,
+
+fonction ajouter() qui va ajouter des comptes utilisateurs et actualiser l'interface, logique de la fonction :
+Récupération des valeurs des champs de formulaires ci-dessous ->
+name, firstName, login et mdp avec la méthode :(document.querySelector("selecteur_css").value),
+Test si les 4 champs name, firstName, login et mdp sont remplis : ,
+Insertion des 4 valeurs dans un tableau et push dans la variable tab,
+remplir (incrémenter) la variable resultat avec innerHTML avec les valeurs suivantes :
+"<p>Nom : " + tab[cpt][0] + " Prénom : " + tab[cpt][1] + " Login : " + tab[cpt][2] + " Mot de passe : " + tab[cpt][3]+"</p>",
+Incrémenter la variable cpt,
+Test si cpt est égal à 1 si égal à 1 saisir la ligne de code suivante :
+nbrCompte.innerHTML = "Il y à : "+ (cpt)+ " compte utilisateur";
+Sinon :
+nbrCompte.innerHTML = "Il y à : "+ (cpt)+ " comptes utilisateurs";
+Mettre la variable error avec innerHTML à vide : "",
+Sinon (si les 4 champs ne sont pas remplis affichage d'un message d'erreur, suite else du test des 4 champs) remplir avec le contenu ci-dessous : , 
+error.innerHTML = "Veuillez compléter tous les champs de formulaires !!!";
+
+3 Créer un fichier CSS et le lier au fichier html :
+Mettre en forme le message erreur id error avec la police en italique et la couleur en rouge.
